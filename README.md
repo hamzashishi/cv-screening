@@ -71,3 +71,32 @@ npm run preview
 ```
 
 Deploy the `dist/` folder to your hosting service.
+
+## Deploy to Vercel
+
+This frontend is ready for Vercel. The included `vercel.json` makes React Router work on refresh and direct links.
+
+### Vercel settings
+
+- Framework preset: `Vite`
+- Root directory: `cv-screening-frontend`
+- Build command: `npm run build`
+- Output directory: `dist`
+
+### Required environment variable
+
+Set this in Vercel before deploying:
+
+```env
+VITE_API_URL=https://your-backend-domain/api
+```
+
+Example:
+
+```env
+VITE_API_URL=https://cv-screening-backend.onrender.com/api
+```
+
+## Backend hosting
+
+The Django backend should be deployed separately on a Python host such as Render. This repo already includes [`render.yaml`](C:/Users/hp/Desktop/data/render.yaml) for that side.
